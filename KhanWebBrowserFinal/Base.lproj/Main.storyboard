@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c0E-Xf-gPA">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Bvv-se-HJn">
+            <objects>
+                <viewController id="c0E-Xf-gPA" customClass="ViewController" customModule="KhanWebBrowserFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ppc-98-ByX"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHY-Od-Fs9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zd0-5Q-JV9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpT-JT-Zi9">
+                                <rect key="frame" x="0.0" y="761" width="453" height="44"/>
+                                <items>
+                                    <barButtonItem title="Reload" id="e09-Ye-r1s">
+                                        <connections>
+                                            <action selector="reload" destination="RIx-Zu-QAo" id="ix2-Ph-gw0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop" id="5rA-wl-Ac7">
+                                        <connections>
+                                            <action selector="stopLoading" destination="RIx-Zu-QAo" id="9cU-MB-wKK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="Des-VA-ijw">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SEARCH" textAlignment="center" minimumFontSize="17" id="FEJ-Dk-Eo4">
+                                            <rect key="frame" x="138.66666666666666" y="5" width="150.99999999999997" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.61914659189999999" green="0.74622260470000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="c0E-Xf-gPA" id="OqH-ky-ytY"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="lTO-OA-EQZ">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SLT-Ng-fxI">
+                                            <rect key="frame" x="289.66666666666669" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Go"/>
+                                            <connections>
+                                                <action selector="searchGo:" destination="c0E-Xf-gPA" eventType="touchUpInside" id="5Xy-Z8-kYS"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem title="&lt;-" id="uh0-OK-6Ga">
+                                        <connections>
+                                            <action selector="goBack:" destination="c0E-Xf-gPA" id="u4I-Ol-c11"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="-&gt;" id="JYh-Nb-WBr">
+                                        <connections>
+                                            <action selector="Forward:" destination="c0E-Xf-gPA" id="dah-xN-426"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="c0E-Xf-gPA" id="NMn-iu-3rG"/>
+                                </connections>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aS1-cm-1Ya">
+                                <rect key="frame" x="162" y="318" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4k-tL-aC0">
+                                <rect key="frame" x="16" y="28" width="290" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61914659189999999" green="0.74622260470000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="c0E-Xf-gPA" id="DxQ-fc-pzN"/>
+                                </connections>
+                            </textField>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-Zu-QAo">
+                                <rect key="frame" x="0.0" y="66" width="375" height="557"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="c0E-Xf-gPA" id="hPr-Oc-cAE"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DBI-rK-XAg">
+                                <rect key="frame" x="275" y="33" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReU-KO-8TL">
+                                <rect key="frame" x="314" y="28" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="bing.jpg"/>
+                                <connections>
+                                    <action selector="bingclick:" destination="c0E-Xf-gPA" eventType="touchUpInside" id="ZhU-fd-sLv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52E-Vj-8RW">
+                                <rect key="frame" x="314" y="28" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="imgres.png"/>
+                                <connections>
+                                    <action selector="googleclick:" destination="c0E-Xf-gPA" eventType="touchUpInside" id="Gpy-EV-y61"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORq-tc-tcv">
+                                <rect key="frame" x="318" y="28" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="yahoo.jpg"/>
+                                <connections>
+                                    <action selector="yahooclick:" destination="c0E-Xf-gPA" eventType="touchUpInside" id="pfK-Uv-fAS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KpT-JT-Zi9" secondAttribute="trailing" id="89o-Fa-5Aw"/>
+                            <constraint firstAttribute="bottom" secondItem="KpT-JT-Zi9" secondAttribute="bottom" id="jui-e7-zdf"/>
+                            <constraint firstItem="KpT-JT-Zi9" firstAttribute="leading" secondItem="Zd0-5Q-JV9" secondAttribute="leading" id="xLl-VB-eD4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="act" destination="DBI-rK-XAg" id="uf1-G1-MNZ"/>
+                        <outlet property="back" destination="uh0-OK-6Ga" id="EhR-n5-MqP"/>
+                        <outlet property="forwa" destination="JYh-Nb-WBr" id="Su6-fc-Ti2"/>
+                        <outlet property="google" destination="52E-Vj-8RW" id="imK-ZW-srj"/>
+                        <outlet property="image" destination="ReU-KO-8TL" id="Akb-IC-Iuh"/>
+                        <outlet property="searchEnter" destination="FEJ-Dk-Eo4" id="xsh-q9-AjJ"/>
+                        <outlet property="urlEnter" destination="f4k-tL-aC0" id="8vf-qz-4Q2"/>
+                        <outlet property="webView" destination="RIx-Zu-QAo" id="nRC-ny-fMq"/>
+                        <outlet property="yahoo" destination="ORq-tc-tcv" id="lBm-Zx-dbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cU-Uu-Js2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.40000000000001" y="96.7016491754123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bing.jpg" width="45" height="35"/>
+        <image name="imgres.png" width="30" height="30"/>
+        <image name="yahoo.jpg" width="10.800000190734863" height="7.1999998092651367"/>
+    </resources>
+</document>

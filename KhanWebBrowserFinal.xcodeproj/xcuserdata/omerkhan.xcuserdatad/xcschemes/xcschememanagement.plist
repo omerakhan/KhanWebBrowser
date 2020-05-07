@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>KhanWebBrowserFinal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D1E5F4C81DC97EB700093773</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1E5F4DF1DC97EB800093773</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1E5F4EA1DC97EB800093773</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
